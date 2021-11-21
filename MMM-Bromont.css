@@ -1,0 +1,62 @@
+/*
+ *
+ * MMM-Bromont
+ *
+ * Olivier Gélinas
+ * MIT Licensed.
+ *
+ * Custom here your css module
+ *
+ */
+
+td.status {
+    text-align:    center;
+    vertical-align: middle;
+}
+
+td.status_day {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ico-container {
+    line-height: 24px;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ico-container-size {
+    width: 24px;
+    height: 24px;
+}
+
+
+.ico-facile {
+    fill: red;
+}
+
+.ico-intermed {
+    fill: currentColor;
+}
+
+.ico-difficile {
+    fill: currentColor;
+}
+
+.ico-tdifficile {
+    fill: currentColor;
+}
+
+td.name {
+    text-align:     left;
+}
+
+td.detail {
+    padding-left:   20px;
+    text-align:     left;
+    vertical-align: middle;
+}

@@ -1,0 +1,13 @@
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<defs>
+<style>.cls-1{fill:#259d36;}</style>
+</defs>
+<circle class="cls-1" cx="3.5" cy="8" r="3.5"/>
+<!-- <path
+    d="
+      M (3.5 - 3.5), 8
+      a 3.5,3.5 0 1,0 (7),0
+      a 3.5,3.5 0 1,0 -(7),0
+    "
+/> -->
+</svg>

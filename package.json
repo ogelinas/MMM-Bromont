@@ -1,0 +1,12 @@
+{
+    "name": "MMM-Bromont",
+    "version": "1.0.0",
+    "description": "Bromont, montagne d'expériences for MagicMirror",
+    "main": "MMM-Bromont.js",
+    "author": "Olivier Gélinas",
+    "license": "MIT",
+    "dependencies": {
+        "request": "latest",
+        "cheerio": "latest"
+    }
+}
