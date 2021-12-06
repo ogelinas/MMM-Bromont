@@ -9,54 +9,85 @@
  *
  */
 
-td.status {
-    text-align:    center;
-    vertical-align: middle;
-}
-
-td.status_day {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.ico-container {
-    line-height: 24px;
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.ico-container-size {
-    width: 24px;
-    height: 24px;
-}
-
-
 .ico-facile {
-    fill: red;
+    border-radius:      50%;
+    width:              12px;
+    height:             12px;
+    background-color: #259d36;
+    display:            table-cell;
 }
 
 .ico-intermed {
-    fill: currentColor;
+    width:              12px;
+    height:             12px;
+    background-color: #0068b1;
+    display:            table-cell;
 }
 
 .ico-difficile {
-    fill: currentColor;
+    width:              12px;
+    height:             12px;
+    background-color:   #aaaaaa;
+    display:            table-cell;
+    transform:          rotate(45deg);
 }
 
-.ico-tdifficile {
-    fill: currentColor;
+/* .difficile:before {
+    width:              12px;
+    height:             12px;
+    background-color: #ff0000;
+    display:            table-cell;
+    transform:          rotate(45deg) translate(0px);
 }
+.difficile:after {
+    width:              12px;
+    height:             12px;
+    background-color: #ffee00;
+    display:            table-cell;
+    transform:          rotate(45deg) translate(4px);
+}
+.tdifficile {
+    width:              12px;
+    height:             12px;
+    background-color: #ffee00;
+    display:            table-cell;
+    transform:          rotate(45deg) translate(2px);
+} */
 
-td.name {
+td.recap {
     text-align:     left;
+    vertical-align: middle;
 }
 
-td.detail {
+td.status_open{
+    padding-left:   10px;
+    text-align:     right;
+    vertical-align: middle;
+}
+
+td.status_total{
+    text-align:     left;
+    vertical-align: middle;
+}
+
+.trail_difficulty {
+    display:        inline-block;
+    width:          30px;
+    height:         20px;
+    padding:        0px;
+    margin:         0px;
+    text-align:     center;
+    vertical-align: middle;
+}
+
+td.trail_name {
     padding-left:   20px;
     text-align:     left;
+    vertical-align: middle;
+}
+
+td.trail_status {
+    padding-left:   10px;
+    text-align:     center;
     vertical-align: middle;
 }

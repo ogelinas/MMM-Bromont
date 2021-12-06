@@ -101,9 +101,9 @@ Module.register("MMM-Bromont", {
 		// create element wrapper for show into the module
 		var wrapper = document.createElement("div");
 
-		var header = document.createElement('header');
-		header.innerHTML = "Ski Bromont";
-		wrapper.appendChild(header);
+		// var header = document.createElement('header');
+		// header.innerHTML = "Ski Bromont";
+		// wrapper.appendChild(header);
 
 		// Data from helper
 		if (this.dataNotification) {
@@ -115,47 +115,42 @@ Module.register("MMM-Bromont", {
 
 					if (conditions != []) {
 
-						// Table
 						var table = document.createElement("table");
 						wrapper.appendChild(table);
-						table.className = "small";
 
 						conditions.forEach(recap => {
+
 							// Row
 							var tr = document.createElement("tr");
 							table.appendChild(tr);
-							tr.className = "light";
-							table.append(tr);
 
-							// Section title
+							// Recap Label
 							var td = document.createElement("td");
 							td.innerHTML = recap.title;
-							td.classList.add("normal", "bright", "name");
-							tr.append(td);
+							td.classList.add("small", "recap");
+							tr.appendChild(td);
 
-							// Day Open / Day Total
+							// Day Status
 							var td = document.createElement("td");
 							td.innerHTML = recap.day_open;
-							// td.innerHTML = "888";
-							td.classList.add("status", "status_day");
-							var span = document.createElement("span");
-							span.innerHTML = " / " + recap.day_total;
-							// span.innerHTML = " / " + "888";
-							span.className = "xsmall light";
-							td.append(span);
-							tr.append(td);
+							td.classList.add("small", "status_open");
+							tr.appendChild(td);
 
-							// Night Open / Night Total
+							var td = document.createElement("td");
+							td.innerHTML = " / " + recap.day_total;
+							td.classList.add("xsmall", "light", "status_total");
+							tr.appendChild(td);
+
+							// Night Status
 							var td = document.createElement("td");
 							td.innerHTML = recap.night_open;
-							// td.innerHTML = "888";
-							td.className = "status"
-							var span = document.createElement("span");
-							span.innerHTML = " / " + recap.night_total;
-							// span.innerHTML = " / " + "888";
-							span.className = "xsmall light";
-							td.append(span);
-							tr.append(td);
+							td.classList.add("small", "status_open");
+							tr.appendChild(td);
+
+							var td = document.createElement("td");
+							td.innerHTML = " / " + recap.night_total;
+							td.classList.add("xsmall", "light", "status_total");
+							tr.appendChild(td);
 
 							if (recap.details) {
 								
@@ -165,33 +160,53 @@ Module.register("MMM-Bromont", {
 									var tr = document.createElement("tr");
 									table.append(tr);
 				
+									// Icon and Name
 									var td = document.createElement("td");
-									
-									// Icon
-									var iconContainer = document.createElement("span");
-									iconContainer.classList.add("ico-container");
-									iconContainer.appendChild(self.svgIconFactory(detail.legend));
-									td.append(iconContainer);
+									tr.appendChild(td)
+									var div = document.createElement("div");
+									div.classList.add("trail_difficulty");
 
-									// Name
+									
+									// if (detail.legend=='ico-difficile') {
+									// 	var difficile = document.createElement("div");
+									// 	difficile.classList.add("difficile");
+									// 	div.appendChild(difficile);
+
+									// 	// var tdifficile = document.createElement("div");
+									// 	// tdifficile.classList.add("tdifficile");
+									// 	// div.appendChild(tdifficile);
+
+									// } else {
+									// 	var legend = document.createElement("div");
+									// 	legend.classList.add(detail.legend);
+									// 	div.appendChild(legend);
+									// }
+
+									var legend = document.createElement("div");
+										legend.classList.add(detail.legend);
+										div.appendChild(legend);
+									
+									td.append(div);
 									td.innerHTML = td.innerHTML + this.truncate(detail.name);
-									td.classList.add("xsmall", "light", "detail");
-									tr.append(td);
+									td.classList.add("xsmall", "light", "trail_name");
 
 									// Status Day
 									var td = document.createElement("td");
+									td.setAttribute("colspan", "2")
 									td.innerHTML = detail.status_day;
-									// td.innerHTML = "Ouvert";
-									td.className = "xsmall light status";
+									td.classList.add("xsmall", "light", "trail_status");
 									tr.append(td);
 
 									// Status Night
 									var td = document.createElement("td");
+									td.setAttribute("colspan", "2")
 									td.innerHTML = detail.status_night;
-									td.className = "xsmall light status";
+									td.classList.add("xsmall", "light", "trail_status");
 									tr.append(td);
 								});
 							}
+
+							
 						});
 					}
 				} else if (this.dataNotification.response.statusCode == 401) {
@@ -207,8 +222,6 @@ Module.register("MMM-Bromont", {
 				// Error
 
 			}
-
-			
 		}
 		return wrapper;
 	},
@@ -228,7 +241,7 @@ Module.register("MMM-Bromont", {
 		//FIXME: This can be load a one file javascript definition
 		return {
 			en: "translations/en.json",
-			es: "translations/es.json"
+			es: "translations/fr.json"
 		};
 	},
 
