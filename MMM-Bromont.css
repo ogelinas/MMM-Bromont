@@ -54,6 +54,10 @@
     transform:          rotate(45deg) translate(2px);
 } */
 
+table.recap {
+    display:        inline-block;
+}
+
 td.recap {
     text-align:     left;
     vertical-align: middle;

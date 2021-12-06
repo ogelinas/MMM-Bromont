@@ -116,6 +116,7 @@ Module.register("MMM-Bromont", {
 					if (conditions != []) {
 
 						var table = document.createElement("table");
+						table.classList.add("recap");
 						wrapper.appendChild(table);
 
 						conditions.forEach(recap => {
