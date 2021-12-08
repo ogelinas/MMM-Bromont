@@ -54,6 +54,26 @@
     transform:          rotate(45deg) translate(2px);
 } */
 
+.easy {
+    content:        url(icons/easy.svg);
+    display:        inline-block;
+}
+
+.intermediate {
+    content:        url(icons/intermediate.svg);
+    display:        inline-block;
+}
+
+.difficult {
+    content:        url(icons/difficult.svg);
+    display:        inline-block;
+}
+
+.hard {
+    content:        url(icons/hard.svg);
+    display:        inline-block;
+}
+
 table.recap {
     display:        inline-block;
 }
@@ -76,9 +96,9 @@ td.status_total{
 
 .trail_difficulty {
     display:        inline-block;
-    width:          30px;
+    width:          20px;
     height:         20px;
-    padding:        0px;
+    padding-right:  5px;
     margin:         0px;
     text-align:     center;
     vertical-align: middle;

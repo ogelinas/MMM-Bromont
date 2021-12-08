@@ -168,27 +168,38 @@ Module.register("MMM-Bromont", {
 									div.classList.add("trail_difficulty");
 
 									
-									// if (detail.legend=='ico-difficile') {
-									// 	var difficile = document.createElement("div");
-									// 	difficile.classList.add("difficile");
-									// 	div.appendChild(difficile);
+									if (detail.legend=='ico-facile') {
+										var icon = document.createElement("div");
+										icon.classList.add("easy");
+										div.appendChild(icon);
 
-									// 	// var tdifficile = document.createElement("div");
-									// 	// tdifficile.classList.add("tdifficile");
-									// 	// div.appendChild(tdifficile);
+									} else if (detail.legend=='ico-intermed') {
+										var icon = document.createElement("div");
+										icon.classList.add("intermediate");
+										div.appendChild(icon);
 
-									// } else {
-									// 	var legend = document.createElement("div");
-									// 	legend.classList.add(detail.legend);
-									// 	div.appendChild(legend);
-									// }
+									} else if (detail.legend=='ico-difficile') {
+										var icon = document.createElement("div");
+										icon.classList.add("difficult");
+										div.appendChild(icon);
 
-									var legend = document.createElement("div");
+									} else if (detail.legend=='ico-tdifficile') {
+										var icon = document.createElement("div");
+										icon.classList.add("hard");
+										div.appendChild(icon);
+
+									} else {
+										var legend = document.createElement("div");
 										legend.classList.add(detail.legend);
 										div.appendChild(legend);
+									}
+
+									// var legend = document.createElement("div");
+									// 	legend.classList.add(detail.legend);
+									// 	div.appendChild(legend);
 									
 									td.append(div);
-									td.innerHTML = td.innerHTML + this.truncate(detail.name);
+									td.innerHTML = td.innerHTML + this.truncate(this.truncate_slope(detail.name));
 									td.classList.add("xsmall", "light", "trail_name");
 
 									// Status Day
@@ -289,4 +300,8 @@ Module.register("MMM-Bromont", {
 			return str;
 		}
 	},
+
+	truncate_slope: function (str) {
+		return str.replace(/( \|.*)/, "");
+	}
 });
