@@ -74,6 +74,10 @@
     display:        inline-block;
 }
 
+div.recap {
+    display:        inline-block;
+}
+
 table.recap {
     display:        inline-block;
 }

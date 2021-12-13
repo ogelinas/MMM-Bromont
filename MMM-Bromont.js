@@ -105,6 +105,9 @@ Module.register("MMM-Bromont", {
 		// header.innerHTML = "Ski Bromont";
 		// wrapper.appendChild(header);
 
+		var recap = document.createElement("div");
+		wrapper.appendChild(recap);
+
 		// Data from helper
 		if (this.dataNotification) {
 
@@ -117,7 +120,7 @@ Module.register("MMM-Bromont", {
 
 						var table = document.createElement("table");
 						table.classList.add("recap");
-						wrapper.appendChild(table);
+						recap.appendChild(table);
 
 						conditions.forEach(recap => {
 
