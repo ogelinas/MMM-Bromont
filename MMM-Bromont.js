@@ -106,6 +106,7 @@ Module.register("MMM-Bromont", {
 		// wrapper.appendChild(header);
 
 		var recap = document.createElement("div");
+		recap.classList.add("recap");
 		wrapper.appendChild(recap);
 
 		// Data from helper
